@@ -8,7 +8,7 @@ the original paper structure, all figures, tables, and equations.
 
 ```bash
 # 1. Install the plugin
-claude plugins install git@github.com:USER/pdf-translator.git
+claude plugins install github:KimTentap/pdf-translator
 
 # 2. Drop a PDF in your working directory
 cp ~/Downloads/paper.pdf .

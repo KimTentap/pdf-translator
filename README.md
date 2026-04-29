@@ -15,14 +15,14 @@ tables, equations, and nomenclature.
    ```json
    {
      "plugins": [
-       "github:your-username/pdf-translator"
+       "github:KimTentap/pdf-translator"
      ]
    }
    ```
 
    Or install via CLI:
    ```bash
-   claude plugins install github:your-username/pdf-translator
+   claude plugins install github:KimTentap/pdf-translator
    ```
 
 2. **Install Python dependencies:**
