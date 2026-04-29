@@ -1,0 +1,1088 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>太阳能辅助二次再热燃煤发电系统的能量与㶲评价 — 中英对照</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: "Times New Roman", "STSong", "SimSun", "Songti SC", serif;
+    background: #f5f5f5;
+    color: #222;
+    line-height: 1.6;
+  }
+  .container { max-width: 1400px; margin: 0 auto; padding: 20px; }
+
+  /* Page simulation */
+  .page {
+    background: #fff;
+    margin: 20px auto;
+    padding: 40px 50px;
+    max-width: 1300px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    page-break-after: always;
+  }
+
+  /* Title styles */
+  .journal-header { text-align: center; margin-bottom: 10px; }
+  .journal-header .tag {
+    display: inline-block;
+    background: #d32f2f;
+    color: #fff;
+    padding: 4px 16px;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+  .journal-header .date { color: #666; font-size: 13px; margin-top: 4px; }
+
+  .article-title-en { font-size: 22px; font-weight: bold; text-align: center; margin: 16px 0 6px; }
+  .article-title-zh { font-size: 20px; font-weight: bold; text-align: center; margin: 0 0 12px; color: #1a3a6b; }
+
+  .authors { text-align: center; font-size: 15px; margin: 6px 0; }
+  .journal-ref { text-align: center; font-size: 13px; color: #555; margin: 4px 0; }
+  .doi { text-align: center; font-size: 12px; color: #1976d2; margin: 4px 0; }
+
+  .section-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 20px 0 10px;
+    padding: 6px 0;
+    border-bottom: 2px solid #1a3a6b;
+    color: #1a3a6b;
+  }
+  .section-title-zh {
+    font-size: 15px;
+    color: #b71c1c;
+    margin-left: 8px;
+  }
+
+  /* Two-column bilingual layout */
+  .bilingual {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin: 10px 0;
+  }
+  .col-en, .col-zh {
+    padding: 10px 14px;
+    border-left: 3px solid #e0e0e0;
+  }
+  .col-en { border-left-color: #1976d2; }
+  .col-zh { border-left-color: #c62828; }
+  .col-label {
+    font-size: 11px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+  }
+  .col-en .col-label { color: #1976d2; }
+  .col-zh .col-label { color: #c62828; }
+
+  /* Full-width content */
+  .full-width { margin: 10px 0; }
+
+  /* Figures */
+  .figure-container {
+    text-align: center;
+    margin: 16px 0;
+    padding: 10px;
+    background: #fafafa;
+    border: 1px solid #e0e0e0;
+  }
+  .figure-container img {
+    max-width: 100%;
+    height: auto;
+  }
+  .figure-caption {
+    font-size: 12px;
+    margin-top: 6px;
+    color: #333;
+    font-weight: bold;
+  }
+  .figure-caption-zh {
+    font-size: 12px;
+    color: #b71c1c;
+  }
+
+  /* Tables */
+  table.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0;
+    font-size: 12px;
+  }
+  table.data-table th {
+    background: #1a3a6b;
+    color: #fff;
+    padding: 6px 8px;
+    text-align: center;
+    font-weight: bold;
+  }
+  table.data-table td {
+    border: 1px solid #ccc;
+    padding: 4px 8px;
+    text-align: center;
+  }
+  table.data-table tr:nth-child(even) { background: #f7f9fc; }
+
+  /* Nomenclature grid */
+  .nomen-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px 20px;
+    font-size: 11px;
+    margin: 8px 0;
+  }
+  .nomen-item { display: flex; gap: 6px; }
+  .nomen-sym { font-weight: bold; min-width: 60px; font-style: italic; }
+  .nomen-desc { color: #333; }
+  .nomen-zh { color: #b71c1c; font-size: 10px; }
+
+  /* Abstract */
+  .abstract-label {
+    font-weight: bold;
+    font-size: 14px;
+    margin-top: 12px;
+  }
+
+  /* Equations */
+  .equation {
+    text-align: center;
+    margin: 10px 0;
+    font-style: italic;
+    font-family: "Times New Roman", serif;
+    font-size: 13px;
+    overflow-x: auto;
+  }
+
+  /* Print */
+  @media print {
+    body { background: #fff; }
+    .page { box-shadow: none; margin: 0; padding: 20px 30px; }
+  }
+
+  hr.divider { border: none; border-top: 1px solid #ccc; margin: 16px 0; }
+
+  .highlight-box {
+    background: #fff9c4;
+    border: 1px solid #f9a825;
+    padding: 10px 14px;
+    margin: 10px 0;
+    font-size: 13px;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<!-- ====== PAGE 1: TITLE PAGE ====== -->
+<div class="page">
+  <div class="journal-header">
+    <span class="tag">RESEARCH ARTICLE</span>
+    <div class="date">2023年8月22日</div>
+  </div>
+
+  <div class="article-title-en">
+    Energy and exergy evaluations of solar-aided double reheat coal-fired power generation system
+  </div>
+  <div class="article-title-zh">
+    太阳能辅助二次再热燃煤发电系统的能量与㶲评价
+  </div>
+
+  <div class="authors">
+    Junjie Wu<sup>a)</sup>, Jiaming Wu, and Yu Han
+  </div>
+  <div class="journal-ref">
+    Journal of Renewable and Sustainable Energy <b>15</b>, 043702 (2023)
+  </div>
+  <div class="doi">
+    https://doi.org/10.1063/5.0160837
+  </div>
+
+  <div style="text-align:center; margin: 12px 0;">
+    <img src="images/page1_img1.jpeg" alt="Cover graphic" style="max-width:500px; width:100%;">
+  </div>
+
+  <div style="display:flex; justify-content:center; gap:30px; font-size:11px; color:#666; margin-top:8px;">
+    <span>📖 View Online</span>
+    <span>📤 Export Citation</span>
+    <span>⤤ CrossMark</span>
+  </div>
+</div>
+
+<!-- ====== PAGE 2: ABSTRACT + NOMENCLATURE ====== -->
+<div class="page">
+  <div style="font-size:13px; color:#666; margin-bottom:10px;">
+    Journal of Renewable and Sustainable Energy &nbsp;|&nbsp; ARTICLE &nbsp;|&nbsp; pubs.aip.org/aip/rse
+  </div>
+
+  <div class="article-title-en" style="font-size:18px;">
+    Energy and exergy evaluations of solar-aided double reheat coal-fired power generation system
+  </div>
+  <div class="article-title-zh" style="font-size:17px;">
+    太阳能辅助二次再热燃煤发电系统的能量与㶲评价
+  </div>
+
+  <div style="font-size:11px; color:#777; text-align:center; margin:4px 0;">
+    Submitted: 2023年6月6日 &nbsp;|&nbsp; Accepted: 2023年8月4日 &nbsp;|&nbsp; Published Online: 2023年8月22日
+  </div>
+
+  <div style="font-size:12px; margin:8px 0;">
+    <b>作者单位:</b> 南京工程学院能源与动力工程学院, 南京 211167, 中国<br>
+    <b>通讯作者:</b> wujunjie@njit.edu.cn
+  </div>
+
+  <hr class="divider">
+
+  <!-- ABSTRACT -->
+  <div class="abstract-label">ABSTRACT <span style="color:#b71c1c;">— 摘要</span></div>
+  <div class="bilingual">
+    <div class="col-en">
+      <div class="col-label">English</div>
+      <p>In this paper, solar heat with mid- and high-temperature collected by molten salt parabolic trough solar field was integrated into the boiler sub-system of the double reheat coal-fired power generation system. Three typical integration modes were, respectively, evaluated by energy and exergy perspectives in terms of solar-generated electricity and solar energy conversion efficiency. Integration modes I–III utilized solar heat to preheat the inlet superheated steam, inlet reheated steam and inlet double reheated steam, respectively.</p>
+      <p>Based on the case study through energy evaluation, it indicated that integrating solar energy with lower temperature led to higher solar-generated electricity, higher solar-to-solar heat efficiency, and higher solar-to-electricity efficiency. Integration mode I was unreasonably regarded superior to the other two, because the energy evaluation method ignored the quality of solar energy and mistakenly regarded the efficiency of solar heat to solar-generated electricity as the cycle efficiency.</p>
+      <p>As an update, exergy evaluation takes both energy quantity and energy quality into consideration by regarding the efficiency of solar heat exergy to solar-generated electricity as the cycle exergy efficiency. It indicated that integration mode II was more recommended, with the highest solar-to-solar heat exergy efficiency and solar-to-electricity efficiency being 34.0% and 24.7%, respectively. The corresponding aperture area and solar-generated electricity are 5.7×10⁵ m² and 136.1 MW, respectively.</p>
+    </div>
+    <div class="col-zh">
+      <div class="col-label">中文</div>
+      <p>本文将由熔盐抛物槽式太阳能集热场收集的中高温太阳能热量集成到二次再热燃煤发电系统的锅炉子系统中。分别从能量和㶲的角度，对三种典型集成方式在太阳能发电量和太阳能转换效率方面进行评价。集成方式I–III分别利用太阳能热量预热进口过热蒸汽、进口再热蒸汽和进口二次再热蒸汽。</p>
+      <p>基于案例研究的能量评价结果表明，将太阳能与较低温度集成可带来更高的太阳能发电量、更高的太阳能-太阳能热效率和更高的太阳能-电效率。集成方式I被不合理地认为优于其他两种方式，因为能量评价方法忽略了太阳能的品质，并错误地将太阳能热到太阳能发电量的效率视为循环效率。</p>
+      <p>作为改进，㶲评价同时考虑能量数量和能量品质，将太阳能热㶲到太阳能发电量的效率视为循环㶲效率。结果表明，集成方式II更为推荐，其最高的太阳能-太阳能热㶲效率和太阳能-电效率分别为34.0%和24.7%。相应的集热面积和太阳能发电量分别为5.7×10⁵ m²和136.1 MW。</p>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- NOMENCLATURE -->
+  <div class="section-title">NOMENCLATURE <span class="section-title-zh">— 术语表</span></div>
+
+  <div class="bilingual">
+    <div class="col-en">
+      <div class="col-label">English Symbols</div>
+      <div class="nomen-grid">
+        <div class="nomen-item"><span class="nomen-sym">Ẇ</span><span class="nomen-desc">Electricity generation (kW) — 发电量</span></div>
+        <div class="nomen-item"><span class="nomen-sym">ΔT</span><span class="nomen-desc">Temperature difference (K) — 温差</span></div>
+        <div class="nomen-item"><span class="nomen-sym">A</span><span class="nomen-desc">Area (m²) — 面积</span></div>
+        <div class="nomen-item"><span class="nomen-sym">c</span><span class="nomen-desc">Specific heat capacity (kJ/kg°C) — 比热容</span></div>
+        <div class="nomen-item"><span class="nomen-sym">D</span><span class="nomen-desc">Diameter (m) — 直径</span></div>
+        <div class="nomen-item"><span class="nomen-sym">e</span><span class="nomen-desc">Specific exergy (kJ/kg) — 比㶲</span></div>
+        <div class="nomen-item"><span class="nomen-sym">E</span><span class="nomen-desc">Exergy (kW) — 㶲</span></div>
+        <div class="nomen-item"><span class="nomen-sym">G<sub>bn</sub></span><span class="nomen-desc">Direct normal irradiation (kW/m²) — 法向直射辐照</span></div>
+        <div class="nomen-item"><span class="nomen-sym">h</span><span class="nomen-desc">Specific enthalpy (kJ/kg) — 比焓</span></div>
+        <div class="nomen-item"><span class="nomen-sym">IAM</span><span class="nomen-desc">Incidence angle modifier — 入射角修正系数</span></div>
+        <div class="nomen-item"><span class="nomen-sym">k</span><span class="nomen-desc">Thermal conductivity (W/mK) — 导热系数</span></div>
+        <div class="nomen-item"><span class="nomen-sym">K₁</span><span class="nomen-desc">Heat transfer coefficient between HTF and absorber (W/m²K) — HTF与吸收器间传热系数</span></div>
+        <div class="nomen-item"><span class="nomen-sym">K₃</span><span class="nomen-desc">Heat transfer coefficient between glass envelope and atmosphere (W/m²K) — 玻璃套管与大气间传热系数</span></div>
+        <div class="nomen-item"><span class="nomen-sym">l</span><span class="nomen-desc">Length (m) — 长度</span></div>
+        <div class="nomen-item"><span class="nomen-sym">ṁ</span><span class="nomen-desc">Mass flow (kg/s) — 质量流量</span></div>
+        <div class="nomen-item"><span class="nomen-sym">q</span><span class="nomen-desc">Specific enthalpy drop of extraction steam (kJ/kg) — 抽汽比焓降</span></div>
+        <div class="nomen-item"><span class="nomen-sym">Q̇</span><span class="nomen-desc">Energy (kW) — 能量</span></div>
+        <div class="nomen-item"><span class="nomen-sym">Q<sub>LHV</sub></span><span class="nomen-desc">Lower heating value of coal (kJ/kg) — 煤的低位发热量</span></div>
+        <div class="nomen-item"><span class="nomen-sym">T</span><span class="nomen-desc">Temperature (K) — 温度</span></div>
+      </div>
+    </div>
+    <div class="col-zh">
+      <div class="col-label">Greek Symbols / 希腊符号</div>
+      <div class="nomen-grid">
+        <div class="nomen-item"><span class="nomen-sym">α</span><span class="nomen-desc">Absorptance / heat ratio — 吸收率/热比例</span></div>
+        <div class="nomen-item"><span class="nomen-sym">γ</span><span class="nomen-desc">Specific enthalpy drop of drain water (kJ/kg) — 疏水比焓降</span></div>
+        <div class="nomen-item"><span class="nomen-sym">ε</span><span class="nomen-desc">Emissivity — 发射率</span></div>
+        <div class="nomen-item"><span class="nomen-sym">η</span><span class="nomen-desc">Efficiency (-) — 效率</span></div>
+        <div class="nomen-item"><span class="nomen-sym">θ</span><span class="nomen-desc">Angle (°) — 角度</span></div>
+        <div class="nomen-item"><span class="nomen-sym">σ</span><span class="nomen-desc">Specific enthalpy rise of feedwater (kJ/kg) — 给水比焓升</span></div>
+        <div class="nomen-item"><span class="nomen-sym">τ</span><span class="nomen-desc">Transmittance — 透过率</span></div>
+        <div class="nomen-item"><span class="nomen-sym">ν</span><span class="nomen-desc">Viscosity (m²/s) — 粘度</span></div>
+        <div class="nomen-item"><span class="nomen-sym">ρ</span><span class="nomen-desc">Density (kg/m³) — 密度</span></div>
+        <div class="nomen-item"><span class="nomen-sym">σ</span><span class="nomen-desc">Stefan–Boltzmann constant — 斯特藩-玻尔兹曼常数</span></div>
+      </div>
+      <br>
+      <div class="col-label">Abbreviations / 缩写</div>
+      <div class="nomen-grid">
+        <div class="nomen-item"><span class="nomen-sym">CSP</span><span class="nomen-desc">Concentrated solar power — 聚光太阳能发电</span></div>
+        <div class="nomen-item"><span class="nomen-sym">DNI</span><span class="nomen-desc">Direct normal irradiation — 法向直射辐照</span></div>
+        <div class="nomen-item"><span class="nomen-sym">DRCFPGS</span><span class="nomen-desc">Double reheat coal-fired power generation system — 二次再热燃煤发电系统</span></div>
+        <div class="nomen-item"><span class="nomen-sym">FWH</span><span class="nomen-desc">Feedwater heater — 给水加热器</span></div>
+        <div class="nomen-item"><span class="nomen-sym">HTF</span><span class="nomen-desc">Heat transfer fluid — 传热流体</span></div>
+        <div class="nomen-item"><span class="nomen-sym">HP</span><span class="nomen-desc">High-pressure — 高压</span></div>
+        <div class="nomen-item"><span class="nomen-sym">IP</span><span class="nomen-desc">Intermediate-pressure — 中压</span></div>
+        <div class="nomen-item"><span class="nomen-sym">LCOE</span><span class="nomen-desc">Levelized cost of energy — 平准化能源成本</span></div>
+        <div class="nomen-item"><span class="nomen-sym">LP</span><span class="nomen-desc">Low-pressure — 低压</span></div>
+        <div class="nomen-item"><span class="nomen-sym">SADRCFPGS</span><span class="nomen-desc">Solar-aided double reheat coal-fired power generation system — 太阳能辅助二次再热燃煤发电系统</span></div>
+        <div class="nomen-item"><span class="nomen-sym">SAPG</span><span class="nomen-desc">Solar-aided power generation — 太阳能辅助发电</span></div>
+        <div class="nomen-item"><span class="nomen-sym">SCA</span><span class="nomen-desc">Solar collector assembly — 太阳能集热器组件</span></div>
+        <div class="nomen-item"><span class="nomen-sym">SEE</span><span class="nomen-desc">Solar-to-electricity efficiency — 太阳能-电效率</span></div>
+        <div class="nomen-item"><span class="nomen-sym">SHP</span><span class="nomen-desc">Superhigh-pressure — 超高压</span></div>
+        <div class="nomen-item"><span class="nomen-sym">SSHE</span><span class="nomen-desc">Solar-to-solar heat efficiency — 太阳能-太阳能热效率</span></div>
+        <div class="nomen-item"><span class="nomen-sym">SSHEE</span><span class="nomen-desc">Solar-to-solar heat exergy efficiency — 太阳能-太阳能热㶲效率</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ====== PAGE 3-4: INTRODUCTION + GENERAL DESCRIPTION ====== -->
+<div class="page">
+  <div style="font-size:13px; color:#666; margin-bottom:10px;">
+    Journal of Renewable and Sustainable Energy &nbsp;|&nbsp; ARTICLE &nbsp;|&nbsp; pubs.aip.org/aip/rse
+  </div>
+
+  <div class="section-title">I. INTRODUCTION <span class="section-title-zh">— 引言</span></div>
+
+  <div class="bilingual">
+    <div class="col-en">
+      <p>Most of the early research focused on using solar energy to heat part of the working fluid in a coal-fired power generation system with single reheat. Eric conceptualized this kind of system as solar-aided power generation (SAPG) system. It could be flexibly switched to fuel-saving mode or power-boosting mode based on the load condition. Qin pointed out that SAPG system increased the conversion efficiency of solar energy, because both solar and coal shared high-capacity turbines. Zhao revealed that solar energy collected by synthetic oil parabolic trough should be integrated to preheat the feedwater in the regenerative system. Based on a South African case, Pierce proved that a SAPG system was better than a standalone concentrated solar power (CSP) system by effectively lowering the cost. Li compared several integration strategies, indicating that using a solar tower to preheat the exhaust steam from intermediate-pressure (IP) cylinder could further lower the standard coal consumption rate. Li proposed all-condition mechanism model of the SAPG system and assessed the system performance in the view of safety and thermal efficiency. Wu optimized the integration strategy of solar-aided combined heat and power system, indicating that subsequently preheating reheated steam and then first-stage feedwater was more recommended. Yan improved the control strategy regulate flue gas damper for the changes of direct normal irradiance (DNI) conditions. Conclusively, SAPG technology could efficiently increase the conversion efficiency of solar energy.</p>
+    </div>
+    <div class="col-zh">
+      <p>早期研究大多集中于利用太阳能加热单次再热燃煤发电系统中的部分工质。Eric将此类系统概念化为太阳能辅助发电（SAPG）系统。该系统可根据负荷情况灵活切换至节煤模式或功率提升模式。Qin指出SAPG系统提高了太阳能的转换效率，因为太阳能和煤共用大容量汽轮机。Zhao揭示了由合成油抛物槽式集热器收集的太阳能应用于预热回热系统中的给水。基于南非案例，Pierce证明了SAPG系统通过有效降低成本优于独立的聚光太阳能发电（CSP）系统。Li比较了几种集成策略，表明利用太阳能塔预热中压（IP）缸排汽可进一步降低标准煤耗率。Li提出了SAPG系统的全工况机理模型，并从安全性和热效率角度评估了系统性能。Wu优化了太阳能辅助热电联产系统的集成策略，表明先预热再热蒸汽再预热第一级给水更为推荐。Yan改进了根据法向直射辐照（DNI）条件变化调节烟气挡板的控制策略。总之，SAPG技术能够有效提高太阳能的转换效率。</p>
+    </div>
+  </div>
+
+  <div class="bilingual">
+    <div class="col-en">
+      <p>The integration of solar energy always leads to coal-fired generation systems working under the off-design condition. Wu proposed the matrix thermal balance equation to efficiently calculate the mass flow of extraction steam in each stage. Hou found that certain integration strategies led to temperature fluctuations of reheated steam. Qin optimized the solar multiple and thermal energy storage of the SAPG system operating at various strategies. Jiang designed a solar-aided double reheat coal-fired power generation system based on solar tower technology, which further increased both the power output and solar-to-electricity efficiency.</p>
+      <p>In the existing research of SAPG system, synthetic oil and parabolic trough collector are widely adopted due to its mature technology. As the working temperature of synthetic oil is limited to approximately 400°C, it is suitable only for integrating solar heat below 400°C. However, the temperature of superheated steam, reheated steam and double reheated steam in the boiler sub-system is generally above 500°C. The molten salt parabolic trough solar field can collect solar heat with a temperature up to 550°C, which could meet the temperature requirement of heating these high-temperature steams.</p>
+    </div>
+    <div class="col-zh">
+      <p>太阳能的集成总会导致燃煤发电系统在非设计工况下运行。Wu提出了矩阵热平衡方程以高效计算各级抽汽的质量流量。Hou发现某些集成策略会导致再热蒸汽温度波动。Qin优化了在不同策略下运行的SAPG系统的太阳能倍数和储热。Jiang设计了基于太阳能塔技术的太阳能辅助二次再热燃煤发电系统，进一步提高了功率输出和太阳能-电效率。</p>
+      <p>在现有的SAPG系统研究中，合成油和抛物槽式集热器因其技术成熟而被广泛采用。由于合成油的工作温度被限制在约400°C，它仅适用于集成低于400°C的太阳能热量。然而，锅炉子系统中过热蒸汽、再热蒸汽和二次再热蒸汽的温度通常在500°C以上。熔盐抛物槽式太阳能集热场可以收集温度高达550°C的太阳能热量，能够满足加热这些高温蒸汽的温度要求。</p>
+    </div>
+  </div>
+
+  <div class="bilingual">
+    <div class="col-en">
+      <p>There exist two research gaps for a SAPG system using molten salt as the heat transfer fluid. The first problem is how to integrate solar heat with mid- and high-temperature. As the generated electricity of a DRCFPGS mainly depends on the boiler sub-system, this paper focuses on integrating solar heat into the boiler sub-system. Three typical integration modes are proposed, using solar heat to preheat the inlet superheated steam, inlet reheated steam and inlet double reheated steam.</p>
+      <p>The second problem is how to evaluate the performance of solar energy conversion. In the existing research of the SAPG system, with the integration of solar energy into the preheating sub-system, it is easy to calculate the more generated electricity (i.e., solar-generated electricity) using energy evaluation. However, as the temperatures of main steam, reheated steam and double reheated steam should be kept stable, integrating solar energy into the boiler sub-system will not influence the generated electricity of SADRCFPGS. Whether to use energy evaluation method or exergy evaluation method should be compared and discussed to optimize the solar integration.</p>
+    </div>
+    <div class="col-zh">
+      <p>对于使用熔盐作为传热流体的SAPG系统，存在两个研究空白。第一个问题是如何集成中高温太阳能热量。由于DRCFPGS的发电量主要取决于锅炉子系统，本文侧重于将太阳能热量集成到锅炉子系统中。提出了三种典型的集成方式，分别利用太阳能热量预热进口过热蒸汽、进口再热蒸汽和进口二次再热蒸汽。</p>
+      <p>第二个问题是如何评价太阳能转换性能。在现有的SAPG系统研究中，将太阳能集成到预热子系统中，利用能量评价方法很容易计算出增加的发电量（即太阳能发电量）。然而，由于主蒸汽、再热蒸汽和二次再热蒸汽的温度需要保持稳定，将太阳能集成到锅炉子系统不会影响SADRCFPGS的发电量。应当比较和讨论使用能量评价方法还是㶲评价方法，以优化太阳能集成。</p>
+    </div>
+  </div>
+
+  <div class="highlight-box">
+    <b>The novelties are listed as below / 本文的创新点如下：</b><br>
+    (1) This paper proposes to integrate solar heat with mid- and high-temperature collected by a molten salt parabolic trough solar field into a DRCFPGS;<br>
+    <span style="color:#b71c1c;">本文提出将由熔盐抛物槽式太阳能集热场收集的中高温太阳能热量集成到DRCFPGS中；</span><br>
+    (2) Three integration modes of solar energy are proposed, compared, and optimized based on energy and exergy evaluations methods.<br>
+    <span style="color:#b71c1c;">基于能量和㶲评价方法，提出、比较并优化了三种太阳能集成方式。</span>
+  </div>
+
+  <hr class="divider">
+
+  <div class="section-title">II. GENERAL DESCRIPTION OF SADRCFPGS <span class="section-title-zh">— SADRCFPGS总体描述</span></div>
+
+  <div class="bilingual">
+    <div class="col-en">
+      <p>A SADRCFPGS consists of the original DRCFPGS and the newly added molten salt parabolic trough solar field. Figure 1 is the schematic diagram of a typical DRCFPGS. The outlet feedwater from condenser is first pressurized by a condensate pump and then preheated by six feedwater heaters (FWHs). Then, the outlet feedwater from the deaerator is further pressurized by a pump and then heated by the other four FWHs. After that, the preheated and pressurized feedwater is superheated in the boiler to the designed temperature. The superheated steam first expands in the superhigh-pressure (SHP) cylinder, then returns to the boiler for the first reheat. The first reheated steam expands in the high-pressure (HP) cylinder, then returns to the boiler for the double reheat. The double reheated steam expands in the intermediate-pressure (IP) cylinder and low-pressure (LP) cylinder to generate electricity. The extraction steams from the cylinders flow to the corresponding FWHs, while a certain amount of extraction steams to provide the heat source in the corresponding FWHs.</p>
+    </div>
+    <div class="col-zh">
+      <p>SADRCFPGS由原有的DRCFPGS和新增加的熔盐抛物槽式太阳能集热场组成。图1为典型DRCFPGS的原理图。来自凝汽器的出口给水首先由凝结水泵加压，然后经六级给水加热器（FWH）预热。然后，来自除氧器的出口给水由泵进一步加压，再经另外四级FWH加热。之后，预热和加压后的给水在锅炉中被过热至设计温度。过热蒸汽首先在超高压（SHP）缸中膨胀，然后返回锅炉进行第一次再热。第一次再热蒸汽在高压（HP）缸中膨胀，然后返回锅炉进行二次再热。二次再热蒸汽在中压（IP）缸和低压（LP）缸中膨胀做功发电。来自各缸的抽汽流向相应的FWH，提供热源。</p>
+    </div>
+  </div>
+
+  <div class="figure-container">
+    <img src="images/page4_img1.png" alt="Figure 1: Schematic diagram of a typical DRCFPGS">
+    <div class="figure-caption">FIG. 1. Schematic diagram of a typical DRCFPGS.</div>
+    <div class="figure-caption-zh">图1. 典型DRCFPGS原理图</div>
+  </div>
+
+  <div class="bilingual">
+    <div class="col-en">
+      <p>The added molten salt parabolic trough solar field aims to collect solar heat, which can be transferred to the DRCFPGS via a salt/water heat exchanger or a salt/steam heat exchanger. As the temperature of the collected solar heat further increases, this paper focuses on three typical integration modes of solar field arranged in series before the boiler, as shown in Fig. 2. A mixed Hitec molten salt (7% NaNO₃ + 53% KNO₃ + 40% NaNO₂) is used as the HTF, with a temperature up to 550°C, which well meets the temperature demands of boiler sub-system.</p>
+      <p>Figure 2(a) represents integration mode I, in which the solar field is arranged between FWH-1 and the superheaters to preheat the inlet feedwater of boiler. Figure 2(b) represents integration mode II, in which the solar field is arranged between the SHP cylinder and the reheaters to preheat the inlet reheated steam. Figure 2(c) represents integration mode III, in which the solar field is arranged between the HP cylinder and the double reheaters to preheat the inlet double reheated steam.</p>
+    </div>
+    <div class="col-zh">
+      <p>新增的熔盐抛物槽式太阳能集热场旨在收集太阳能热量，通过盐/水换热器或盐/蒸汽换热器将热量传递给DRCFPGS。随着收集的太阳能热量温度进一步提高，本文重点研究如图2所示的串联布置在锅炉前的三种典型太阳能集热场集成方式。采用Hitec混合熔盐（7% NaNO₃ + 53% KNO₃ + 40% NaNO₂）作为HTF，温度可达550°C，完全满足锅炉子系统的温度需求。</p>
+      <p>图2(a)表示集成方式I，太阳能集热场布置在FWH-1和过热器之间，用于预热锅炉进口给水。图2(b)表示集成方式II，太阳能集热场布置在SHP缸和再热器之间，用于预热进口再热蒸汽。图2(c)表示集成方式III，太阳能集热场布置在HP缸和二次再热器之间，用于预热进口二次再热蒸汽。</p>
+    </div>
+  </div>
+
+  <div class="figure-container">
+    <img src="images/page5_img1.jpeg" alt="Figure 2: Schematic diagram of a SADRCFPGS" style="max-width:900px;">
+    <div class="figure-caption">FIG. 2. Schematic diagram of a SADRCFPGS. (a) Mode I, (b) Mode II, (c) Mode III.</div>
+    <div class="figure-caption-zh">图2. SADRCFPGS原理图：(a) 方式I, (b) 方式II, (c) 方式III</div>
+  </div>
+</div>
+
+<!-- ====== PAGES 5-7: MODELING ====== -->
+<div class="page">
+  <div style="font-size:13px; color:#666; margin-bottom:10px;">
+    Journal of Renewable and Sustainable Energy &nbsp;|&nbsp; ARTICLE &nbsp;|&nbsp; pubs.aip.org/aip/rse
+  </div>
+
+  <div class="section-title">III. MODELING <span class="section-title-zh">— 建模</span></div>
+
+  <div class="section-title" style="font-size:14px;">A. Thermodynamic modeling of molten salt parabolic trough solar field <span class="section-title-zh">— 熔盐抛物槽式太阳能集热场热力学建模</span></div>
+
+  <div class="bilingual">
+    <div class="col-en">
+      <p>As a reasonable simplification in the modeling of molten salt parabolic trough solar field, there are several assumptions as listed below:</p>
+      <p>(1) N–S horizontal tracking orientation is applied in solar field.<br>
+      (2) The solar field consists of same number of loops in the east and west side.<br>
+      (3) Each loop consists of the same number of solar collector assemblies (SCAs).<br>
+      (4) The density, viscosity and thermal conductivity of molten salt, the respective equations (1)–(3), are shown as follows:</p>
+    </div>
+    <div class="col-zh">
+      <p>在对熔盐抛物槽式太阳能集热场建模时，为合理简化，做出如下假设：</p>
+      <p>(1) 太阳能集热场采用南北水平跟踪方向。<br>
+      (2) 太阳能集热场东西两侧的回路数量相同。<br>
+      (3) 每个回路由相同数量的太阳能集热器组件（SCA）组成。<br>
+      (4) 熔盐的密度、粘度和导热系数分别如方程(1)–(3)所示：</p>
+    </div>
+  </div>
+
+  <div class="equation">
+    ρ<sub>HTF</sub> = 1938.0 − 0.732 (T<sub>HTF</sub> − 200) &nbsp;&nbsp; (1)<br>
+    ν<sub>HTF</sub> = e<sup>−4.343 − 2.0143 (ln T<sub>HTF</sub> − 5.011)</sup> &nbsp;&nbsp; (2)<br>
+    k<sub>HTF</sub> = −0.000653 (T<sub>HTF</sub> − 260) + 0.421 &nbsp;&nbsp; (3)
+  </div>
+
+  <div class="figure-container">
+    <img src="images/page6_img1.jpeg" alt="Figure 3: Schematic of energy transfer in a SCA" style="max-width:700px;">
+    <div class="figure-caption">FIG. 3. Schematic of energy transfer in a SCA.</div>
+    <div class="figure-caption-zh">图3. SCA中能量传递示意图</div>
+  </div>
+
+  <div class="bilingual">
+    <div class="col-en">
+      <p>Figure 3 shows the schematic of energy transfer in a SCA. The effective incident solar radiation equals the solar energy absorbed by the absorber (Q̇<sub>0,abs</sub>) and the glass envelope (Q̇<sub>0,env</sub>), as shown in the following equation:</p>
+    </div>
+    <div class="col-zh">
+      <p>图3展示了SCA中能量传递的示意图。有效入射太阳辐射等于吸收器（Q̇<sub>0,abs</sub>）和玻璃套管（Q̇<sub>0,env</sub>）吸收的太阳能，如下式所示：</p>
+    </div>
+  </div>
+
+  <div class="equation">
+    A<sub>SCA</sub> G<sub>bn</sub> η<sub>opt</sub> η<sub>end</sub> η<sub>shadow</sub> cosθ<sub>inc</sub> IAM = Q̇<sub>0,abs</sub> + Q̇<sub>0,env</sub> &nbsp;&nbsp; (4)
+  </div>
+
+  <div class="bilingual">
+    <div class="col-en">
+      <p>where A<sub>SCA</sub> is the aperture area of SCA, G<sub>bn</sub> is the DNI, θ<sub>inc</sub> is the incident angle in radians, IAM is the incident angle modifier as shown in Eq. (5), η<sub>opt</sub> is the optical efficiency, η<sub>end</sub> is the end losses as shown in Eq. (6), and η<sub>shadow</sub> is the shadow factor as shown in Eq. (7).</p>
+    </div>
+    <div class="col-zh">
+      <p>其中A<sub>SCA</sub>是SCA的采光面积，G<sub>bn</sub>是DNI，θ<sub>inc</sub>是以弧度为单位的入射角，IAM如方程(5)所示为入射角修正系数，η<sub>opt</sub>是光学效率，η<sub>end</sub>如方程(6)所示为末端损失，η<sub>shadow</sub>如方程(7)所示为阴影系数。</p>
+    </div>
+  </div>
+
+  <div class="equation">
+    IAM = max( 1 + c₁·θ<sub>inc</sub>/cosθ<sub>inc</sub> + c₂·θ<sub>inc</sub>²/cosθ<sub>inc</sub>, 0 ) &nbsp;&nbsp; (5)<br>
+    <small>where c₁ = −0.008 and c₂ = −0.117.</small>
+  </div>
+
+  <div class="equation">
+    η<sub>end</sub> = 1 − (l<sub>f</sub> tanθ<sub>inc</sub>) / l<sub>SCA</sub> &nbsp;&nbsp; (6)<br>
+    <small>where l<sub>f</sub> is the focal length of the collector and l<sub>SCA</sub> is the SCA length.</small>
+  </div>
+
+  <div class="equation">
+    η<sub>shadow</sub> = min( l<sub>rs</sub> cosθ<sub>z</sub> / (l<sub>Wide</sub> cosθ<sub>inc</sub>), 1 ) &nbsp;&nbsp; (7)<br>
+    <small>where l<sub>rs</sub> is the row spacing of solar field, l<sub>Wide</sub> is the width of the collector aperture, and θ<sub>z</sub> is the zenith angle.</small>
+  </div>
+
+  <div class="bilingual">
+    <div class="col-en">
+      <p>For convenience, effective DNI (G<sub>bn,eff</sub>) is defined as:</p>
+    </div>
+    <div class="col-zh">
+      <p>为方便起见，有效DNI（G<sub>bn,eff</sub>）定义为：</p>
+    </div>
+  </div>
+
+  <div class="equation">
+    G<sub>bn,eff</sub> = G<sub>bn</sub> η<sub>opt</sub> η<sub>end</sub> η<sub>shadow</sub> cosθ<sub>inc</sub> IAM &nbsp;&nbsp; (8)
+  </div>
+
+  <div class="bilingual">
+    <div class="col-en">
+      <p>The energy absorbed by the absorber equals the heat convectively transferred to the HTF (Q̇<sub>1</sub>) and the heat radial transferred from absorber to glass envelope (Q̇<sub>2,env,rad</sub>), as shown in Eqs. (9)–(11). These equations involve the density, viscosity and thermal conductivity of molten salt, the respective equations (1)–(3), as the key property parameters:</p>
+    </div>
+    <div class="col-zh">
+      <p>吸收器吸收的能量等于以对流方式传递给HTF的热量（Q̇<sub>1</sub>）和从吸收器辐射传递给玻璃套管的热量（Q̇<sub>2,env,rad</sub>），如方程(9)–(11)所示。这些方程涉及熔盐的密度、粘度和导热系数，分别由方程(1)–(3)给出作为关键物性参数：</p>
+    </div>
+  </div>
+
+  <div class="equation">
+    Q̇<sub>1</sub> = K₁ π D<sub>abs,in</sub> l<sub>SCA</sub> ( T<sub>abs</sub> − (T<sub>HTF,in</sub> + T<sub>HTF,out</sub>)/2 )<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;= ṁ<sub>HTF</sub> c (T<sub>HTF,out</sub> − T<sub>HTF,in</sub>) &nbsp;&nbsp; (10)
+  </div>
+
+  <div class="equation">
+    Q̇<sub>2,env,rad</sub> = σ π D<sub>abs,out</sub> l<sub>SCA</sub> (T<sub>abs</sub>⁴ − T<sub>env,in</sub>⁴) / (1/ε<sub>abs</sub> + (1−ε<sub>env,in</sub>)/ε<sub>env,in</sub> · D<sub>abs,out</sub>/D<sub>env,in</sub>) &nbsp;&nbsp; (11)
+  </div>
+
+  <div class="bilingual">
+    <div class="col-en">
+      <p>where K is the heat transfer coefficient, D is the diameter, c is the specific heat capacity, σ is the Stefan–Boltzmann constant, and ε is the emissivity (Table I).</p>
+      <p>The energy gained by the glass envelope is lost to the atmosphere by radiation (Q̇<sub>3,sky,rad</sub>) and convection (Q̇<sub>3,atm,con</sub>), as shown in Eq. (12). Q̇<sub>3,sky,rad</sub> and Q̇<sub>3,atm,con</sub> can be, respectively, calculated through the following equations:</p>
+    </div>
+    <div class="col-zh">
+      <p>其中K是传热系数，D是直径，c是比热容，σ是斯特藩-玻尔兹曼常数，ε是发射率（表I）。</p>
+      <p>玻璃套管获得的能量通过辐射（Q̇<sub>3,sky,rad</sub>）和对流（Q̇<sub>3,atm,con</sub>）散失到大气中，如方程(12)所示。Q̇<sub>3,sky,rad</sub>和Q̇<sub>3,atm,con</sub>可分别通过以下方程计算：</p>
+    </div>
+  </div>
+
+  <div class="equation">
+    Q̇<sub>2,env,rad</sub> + Q̇<sub>0,env</sub> = Q̇<sub>3,sky,rad</sub> + Q̇<sub>3,atm,con</sub> &nbsp;&nbsp; (12)
+  </div>
+
+  <div class="equation">
+    Q̇<sub>3,atm,con</sub> = K₃ π D<sub>env,out</sub> l<sub>SCA</sub> (T<sub>env,out</sub> − T<sub>atm</sub>) &nbsp;&nbsp; (13)
+  </div>
+
+  <div class="equation">
+    Q̇<sub>3,sky,rad</sub> = σ π D<sub>env,out</sub> ε<sub>env,out</sub> l<sub>SCA</sub> [T<sub>env,out</sub>⁴ − (T<sub>atm</sub>−8)⁴] &nbsp;&nbsp; (14)
+  </div>
+
+  <div class="bilingual">
+    <div class="col-en">
+      <p>The solar energy transferred to DRCFPGS can be calculated through Eqs. (15)–(17), corresponding to integration modes I, II, and III:</p>
+    </div>
+    <div class="col-zh">
+      <p>传递至DRCFPGS的太阳能可分别通过方程(15)–(17)计算，对应集成方式I、II和III：</p>
+    </div>
+  </div>
+
+  <div class="equation">
+    Q̇<sub>solar</sub> = ṁ<sub>FW</sub> (h<sub>SH,in</sub> − h<sub>fw,1</sub>) &nbsp;&nbsp; (15)
+  </div>
+  <div class="equation">
+    Q̇<sub>solar</sub> = ṁ<sub>FW</sub> α<sub>rh</sub> (h<sub>rh,in</sub> − h₁) &nbsp;&nbsp; (16)
+  </div>
+  <div class="equation">
+    Q̇<sub>solar</sub> = ṁ<sub>FW</sub> α<sub>drh</sub> (h<sub>drh,in</sub> − h₃) &nbsp;&nbsp; (17)
+  </div>
+
+  <div class="bilingual">
+    <div class="col-en">
+      <p>where α<sub>rh</sub> is the reheat ratio and α<sub>drh</sub> is the double reheat ratio.</p>
+      <p>The solar exergy transferred to DRCFPGS can be calculated through Eqs. (18)–(20), corresponding to integration modes I, II, and III:</p>
+    </div>
+    <div class="col-zh">
+      <p>其中α<sub>rh</sub>是再热比例，α<sub>drh</sub>是二次再热比例。</p>
+      <p>传递至DRCFPGS的太阳能㶲可分别通过方程(18)–(20)计算，对应集成方式I、II和III：</p>
+    </div>
+  </div>
+
+  <div class="equation">
+    Ė<sub>solar</sub> = ṁ<sub>FW</sub> (e<sub>SH,in</sub> − e<sub>fw,1</sub>) &nbsp;&nbsp; (18)
+  </div>
+  <div class="equation">
+    Ė<sub>solar</sub> = ṁ<sub>FW</sub> α<sub>rh</sub> (e<sub>rh,in</sub> − e₁) &nbsp;&nbsp; (19)
+  </div>
+  <div class="equation">
+    Ė<sub>solar</sub> = ṁ<sub>FW</sub> α<sub>drh</sub> (e<sub>drh,in</sub> − e₃) &nbsp;&nbsp; (20)
+  </div>
+
+  <div class="bilingual">
+    <div class="col-en">
+      <p>where e is the specific exergy.</p>
+    </div>
+    <div class="col-zh">
+      <p>其中e为比㶲。</p>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <div class="section-title" style="font-size:14px;">B. Thermodynamic modeling of turbine and feedwater preheating sub-systems <span class="section-title-zh">— 汽轮机和给水预热子系统热力学建模</span></div>
+
+  <div class="bilingual">
+    <div class="col-en">
+      <p>Equation (21) shows the energy balance of each FWH in a matrix form:</p>
+    </div>
+    <div class="col-zh">
+      <p>方程(21)以矩阵形式展示了每个FWH的能量平衡：</p>
+    </div>
+  </div>
+
+  <div class="equation">
+    <!-- Matrix representation simplified -->
+    [q] · [ṁ<sub>ex</sub>] = ṁ<sub>FW</sub> · [σ] &nbsp;&nbsp; (21)
+  </div>
+
+  <div class="bilingual">
+    <div class="col-en">
+      <p>where q is the specific enthalpy drop of the extraction steam, γ is the specific enthalpy drop of drain water, σ is the specific enthalpy rise of feedwater, and ṁ<sub>ex</sub> is the mass flow of extraction steam.</p>
+      <p>The power generated from turbines can be calculated as:</p>
+    </div>
+    <div class="col-zh">
+      <p>其中q是抽汽的比焓降，γ是疏水的比焓降，σ是给水的比焓升，ṁ<sub>ex</sub>是抽汽的质量流量。</p>
+      <p>汽轮机的发电量可计算为：</p>
+    </div>
+  </div>
+
+  <div class="equation">
+    Ẇ = ṁ<sub>ex1</sub>(h<sub>sh,out</sub>−h₁) + Σṁ<sub>ex,i</sub>(h₀−h₁+h<sub>rh,out</sub>−h<sub>i</sub>)<br>
+    &nbsp;&nbsp;&nbsp;+ Σṁ<sub>ex,i</sub>(h₀−h₁+h<sub>rh,out</sub>−h₃+h<sub>drh,out</sub>−h<sub>i</sub>)<br>
+    &nbsp;&nbsp;&nbsp;+ (ṁ<sub>FW</sub>−Σṁ<sub>ex,i</sub>)(h₀−h₁+h<sub>rh,out</sub>−h₃+h<sub>drh,out</sub>−h<sub>c</sub>) &nbsp;&nbsp; (22)
+  </div>
+
+  <div class="bilingual">
+    <div class="col-en">
+      <p>where h<sub>sh,out</sub> is the specific enthalpy of superheated steam, h<sub>rh,out</sub> is the specific enthalpy of reheated steam, h<sub>drh,out</sub> is the specific enthalpy of double reheated steam, and h<sub>c</sub> is the specific enthalpy of exhaust steam from the LP cylinder.</p>
+    </div>
+    <div class="col-zh">
+      <p>其中h<sub>sh,out</sub>是过热蒸汽的比焓，h<sub>rh,out</sub>是再热蒸汽的比焓，h<sub>drh,out</sub>是二次再热蒸汽的比焓，h<sub>c</sub>是LP缸排汽的比焓。</p>
+    </div>
+  </div>
+</div>
+
+<!-- ====== PAGES 7-8: EVALUATION CRITERIA ====== -->
+<div class="page">
+  <div style="font-size:13px; color:#666; margin-bottom:10px;">
+    Journal of Renewable and Sustainable Energy &nbsp;|&nbsp; ARTICLE &nbsp;|&nbsp; pubs.aip.org/aip/rse
+  </div>
+
+  <div class="section-title">III.D. Evaluation Criteria <span class="section-title-zh">— 评价准则</span></div>
+
+  <div class="section-title" style="font-size:14px;">1. Solar-generated electricity <span class="section-title-zh">— 太阳能发电量</span></div>
+
+  <div class="bilingual">
+    <div class="col-en">
+      <p>Integrating solar heat into the boiler sub-system reduces the coal consumption. However, as the temperatures of main steam, reheated steam, and double reheated steam should be kept stable, the integration of solar energy will not influence the power generation. To distinguish the solar contribution in the power generation, the energy evaluation method and exergy evaluation method are discussed and compared, respectively.</p>
+      <p>The solar-generated electricity derived from energy evaluation equals the working fluid solar contribution in the Rankine cycle with double reheat absorbed by the total input energy, as:</p>
+    </div>
+    <div class="col-zh">
+      <p>将太阳能热量集成到锅炉子系统可降低煤耗。然而，由于主蒸汽、再热蒸汽和二次再热蒸汽的温度需要保持稳定，太阳能的集成不会影响发电量。为了区分太阳能在发电中的贡献，分别讨论和比较了能量评价方法和㶲评价方法。</p>
+      <p>基于能量评价的太阳能发电量等于工质太阳能贡献在二次再热朗肯循环中的份额，按其占总输入能量的比例分配，即：</p>
+    </div>
+  </div>
+
+  <div class="equation">
+    Ẇ<sub>solar,en</sub> = Q̇<sub>solar</sub> · Ẇ / (ṁ<sub>coal</sub> Q<sub>LHV</sub> + Q̇<sub>solar</sub>) &nbsp;&nbsp; (24)
+  </div>
+
+  <div class="bilingual">
+    <div class="col-en">
+      <p>The solar-generated electricity derived from exergy evaluation equals the solar contribution in the total input exergy absorbed by the working fluid in the regenerative Rankine cycle with double reheat, as:</p>
+    </div>
+    <div class="col-zh">
+      <p>基于㶲评价的太阳能发电量等于太阳能在工质吸收的总输入㶲中的贡献份额，即在二次再热回热朗肯循环中：</p>
+    </div>
+  </div>
+
+  <div class="equation">
+    Ẇ<sub>solar,ex</sub> = Ė<sub>solar</sub> · Ẇ / [ṁ<sub>FW</sub>(e<sub>SH,out</sub>−e<sub>fw,1</sub> + α<sub>rh</sub>(e<sub>rh,out</sub>−e₁) + α<sub>drh</sub>(e<sub>drh,out</sub>−e₃))] &nbsp;&nbsp; (25)
+  </div>
+
+  <hr class="divider">
+
+  <div class="section-title" style="font-size:14px;">2. Conversion efficiency of solar energy based on energy evaluation <span class="section-title-zh">— 基于能量评价的太阳能转换效率</span></div>
+
+  <div class="bilingual">
+    <div class="col-en">
+      <p>From the perspective of energy analysis, the conversion of solar energy takes two stages. The first stage is the conversion from solar energy to solar heat in the molten salt parabolic trough solar field. The second stage is the conversion from solar heat to solar-generated electricity in DRCFPGS.</p>
+      <p>Solar-to-solar heat efficiency (SSHE) evaluates the solar conversion in the first stage, as:</p>
+    </div>
+    <div class="col-zh">
+      <p>从能量分析的角度来看，太阳能的转换分为两个阶段。第一阶段是在熔盐抛物槽式太阳能集热场中从太阳能到太阳能热量的转换。第二阶段是在DRCFPGS中从太阳能热量到太阳能发电量的转换。</p>
+      <p>太阳能-太阳能热效率（SSHE）评价第一阶段中的太阳能转换，即：</p>
+    </div>
+  </div>
+
+  <div class="equation">
+    η<sub>SSHE,en</sub> = Q̇<sub>solar</sub> / Q̇<sub>inc</sub> &nbsp;&nbsp; (26)
+  </div>
+
+  <div class="bilingual">
+    <div class="col-en">
+      <p>Solar-to-electricity efficiency derived from energy evaluation calculates the conversion from the incident solar energy to solar-generated electricity, which is also the product of SSHE and the cycle efficiency, as:</p>
+    </div>
+    <div class="col-zh">
+      <p>基于能量评价的太阳能-电效率计算从入射太阳能到太阳能发电量的转换，也是SSHE与循环效率的乘积，即：</p>
+    </div>
+  </div>
+
+  <div class="equation">
+    η<sub>SEE,en</sub> = η<sub>SSHE,en</sub> · η<sub>c,en</sub> = Q̇<sub>solar</sub> · Ẇ / [Q̇<sub>inc</sub> · (ṁ<sub>coal</sub> Q<sub>LHV</sub> + Q̇<sub>solar</sub>)] &nbsp;&nbsp; (27)
+  </div>
+
+  <hr class="divider">
+
+  <div class="section-title" style="font-size:14px;">3. Conversion efficiency of solar energy based on exergy evaluation <span class="section-title-zh">— 基于㶲评价的太阳能转换效率</span></div>
+
+  <div class="bilingual">
+    <div class="col-en">
+      <p>Solar-to-solar heat exergy efficiency (SSHEE) calculates the conversion from incident solar energy to solar heat exergy absorbed by the working fluid, as shown in the following equation:</p>
+    </div>
+    <div class="col-zh">
+      <p>太阳能-太阳能热㶲效率（SSHEE）计算从入射太阳能到工质吸收的太阳能热㶲的转换，如下式所示：</p>
+    </div>
+  </div>
+
+  <div class="equation">
+    η<sub>SSHEE,ex</sub> = Ė<sub>solar</sub> / Q̇<sub>inc</sub> &nbsp;&nbsp; (28)
+  </div>
+
+  <div class="bilingual">
+    <div class="col-en">
+      <p>Solar-to-electricity efficiency based on exergy evaluation calculates the conversion from the incident solar energy to solar-generated electricity, which is also the product of SSHEE and the cycle exergy efficiency, as:</p>
+    </div>
+    <div class="col-zh">
+      <p>基于㶲评价的太阳能-电效率计算从入射太阳能到太阳能发电量的转换，也是SSHEE与循环㶲效率的乘积，即：</p>
+    </div>
+  </div>
+
+  <div class="equation">
+    η<sub>SEE,ex</sub> = η<sub>SSHEE,ex</sub> · η<sub>c,ex</sub> = Ė<sub>solar</sub> · Ẇ / [Q̇<sub>inc</sub> · (ṁ<sub>coal</sub> · e<sub>coal</sub>)] &nbsp;&nbsp; (29)
+  </div>
+
+  <div class="bilingual">
+    <div class="col-en">
+      <p>where η<sub>c,ex</sub> is the cycle exergy efficiency.</p>
+    </div>
+    <div class="col-zh">
+      <p>其中η<sub>c,ex</sub>是循环㶲效率。</p>
+    </div>
+  </div>
+</div>
+
+<!-- ====== PAGES 8-11: CASE STUDY ====== -->
+<div class="page">
+  <div style="font-size:13px; color:#666; margin-bottom:10px;">
+    Journal of Renewable and Sustainable Energy &nbsp;|&nbsp; ARTICLE &nbsp;|&nbsp; pubs.aip.org/aip/rse
+  </div>
+
+  <div class="section-title">IV. CASE STUDY <span class="section-title-zh">— 案例研究</span></div>
+
+  <div class="bilingual">
+    <div class="col-en">
+      <p>This paper simulates a typical DRCFPGS with 1350 MW capacity, with the key design parameters under 100% load shown in Table II. Table III shows the key design parameters of the solar field. Yinchuan is selected for case study, which presents the average level of solar radiation in Northwest China. Solar noon of June 21st (i.e., the summer solstice) is selected as the design condition.</p>
+    </div>
+    <div class="col-zh">
+      <p>本文模拟了一个典型的1350 MW容量的DRCFPGS，100%负荷下的关键设计参数见表II。表III展示了太阳能集热场的关键设计参数。案例研究选取银川，该地区代表了中国西北地区太阳辐射的平均水平。选择6月21日（即夏至日）的太阳正午作为设计工况。</p>
+    </div>
+  </div>
+
+  <!-- TABLE II -->
+  <div class="figure-caption">TABLE II. Key parameters of coal-fired power generation system with double reheat.</div>
+  <div class="figure-caption-zh">表II. 二次再热燃煤发电系统关键参数</div>
+
+  <div style="font-weight:bold; margin:6px 0; font-size:13px;">(a) Sub-systems of turbine and boiler / 汽轮机和锅炉子系统</div>
+  <table class="data-table">
+    <tr><th>Items / 项目</th><th>Unit / 单位</th><th>Value / 数值</th></tr>
+    <tr><td>主蒸汽质量流量 Mass flow of main steam</td><td>t/h</td><td>3347.3</td></tr>
+    <tr><td>主蒸汽温度 Temperature of main steam</td><td>°C</td><td>600</td></tr>
+    <tr><td>主蒸汽压力 Pressure of main steam</td><td>MPa</td><td>30</td></tr>
+    <tr><td>一次再热蒸汽温度 Temperature of first reheat steam</td><td>°C</td><td>623</td></tr>
+    <tr><td>一次再热蒸汽压力 Pressure of first reheat steam</td><td>MPa</td><td>11.26</td></tr>
+    <tr><td>二次再热蒸汽温度 Temperature of second reheat steam</td><td>°C</td><td>623</td></tr>
+    <tr><td>二次再热蒸汽压力 Pressure of second reheat steam</td><td>MPa</td><td>4.05</td></tr>
+    <tr><td>LP缸排汽焓 Enthalpy of exhaust steam from the LP cylinder</td><td>kJ/kg</td><td>2297.4</td></tr>
+    <tr><td>LP缸排汽压力 Pressure of exhaust steam from the LP cylinder</td><td>kPa</td><td>4.5</td></tr>
+    <tr><td>SHP缸等熵效率 Isentropic efficiency of the SHP cylinder</td><td>%</td><td>90</td></tr>
+    <tr><td>HP缸等熵效率 Isentropic efficiency of the HP cylinder</td><td>%</td><td>92</td></tr>
+    <tr><td>IP缸等熵效率 Isentropic efficiency of the IP cylinder</td><td>%</td><td>92</td></tr>
+    <tr><td>LP缸等熵效率 Isentropic efficiency of the LP cylinder</td><td>%</td><td>88</td></tr>
+    <tr><td>二次再热回热朗肯循环效率 Cycle efficiency</td><td>%</td><td>52.6</td></tr>
+    <tr><td>二次再热回热朗肯循环㶲效率 Cycle exergy efficiency</td><td>%</td><td>87.7</td></tr>
+    <tr><td>锅炉效率 Boiler efficiency</td><td>%</td><td>94.0</td></tr>
+    <tr><td>发电机效率 Generator efficiency</td><td>%</td><td>99.0</td></tr>
+    <tr><td>机械效率 Mechanical efficiency</td><td>%</td><td>99.0</td></tr>
+  </table>
+
+  <div style="font-weight:bold; margin:10px 0 6px; font-size:13px;">(b) Sub-system of feedwater preheating / 给水预热子系统</div>
+  <table class="data-table">
+    <tr>
+      <th>Items / 项目</th><th>Unit</th>
+      <th>FWH-1</th><th>FWH-2</th><th>FWH-3</th><th>FWH-4</th><th>FWH-5</th>
+      <th>FWH-6</th><th>FWH-7</th><th>FWH-8</th><th>FWH-9</th><th>FWH-10</th>
+    </tr>
+    <tr>
+      <td>抽汽压力 (MPa)<br>Pressure of extraction steam</td><td>MPa</td>
+      <td>11.26</td><td>7.02</td><td>4.05</td><td>2.12</td><td>1.19</td>
+      <td>0.69</td><td>0.34</td><td>0.16</td><td>0.06</td><td>0.02</td>
+    </tr>
+  </table>
+</div>
+
+<div class="page">
+  <div style="font-size:13px; color:#666; margin-bottom:10px;">
+    Journal of Renewable and Sustainable Energy &nbsp;|&nbsp; ARTICLE &nbsp;|&nbsp; pubs.aip.org/aip/rse
+  </div>
+
+  <!-- TABLE III -->
+  <div class="figure-caption">TABLE III. Key design parameters of the solar field.</div>
+  <div class="figure-caption-zh">表III. 太阳能集热场关键设计参数</div>
+
+  <table class="data-table">
+    <tr><th>Item / 项目</th><th>Unit / 单位</th><th>Design value / 设计值</th><th>Remarks / 备注</th></tr>
+    <tr><td>经度 Longitude</td><td>°E</td><td>111.68</td><td>中国银川 Yinchuan, China</td></tr>
+    <tr><td>纬度 Latitude</td><td>°N</td><td>40.82</td><td>中国银川 Yinchuan, China</td></tr>
+    <tr><td>设计DNI Design DNI</td><td>W/m²</td><td>1000</td><td></td></tr>
+    <tr><td>环境温度 Ambient temperature</td><td>°C</td><td>20</td><td></td></tr>
+    <tr><td>每个回路SCA数量 Number of SCA in each loop</td><td></td><td>2</td><td></td></tr>
+    <tr><td>相邻集热器行间距 Row spacing distance</td><td>m</td><td>20</td><td></td></tr>
+    <tr><td>HTF平均流速 — 集成方式I</td><td>m/s</td><td>1.48</td><td>集成方式I</td></tr>
+    <tr><td>HTF平均流速 — 集成方式II</td><td>m/s</td><td>2.73</td><td>集成方式II</td></tr>
+    <tr><td>HTF平均流速 — 集成方式III</td><td>m/s</td><td>3.45</td><td>集成方式III</td></tr>
+  </table>
+
+  <hr class="divider">
+
+  <div class="section-title" style="font-size:14px;">A. Energy conversion based on energy evaluation <span class="section-title-zh">— 基于能量评价的能量转换</span></div>
+
+  <div class="bilingual">
+    <div class="col-en">
+      <p>Figure 4 shows the variation of outlet temperature of the solar-heated working fluid with aperture area under various integration modes. The range of the aperture area varies from 3.0×10³ to 7.4×10⁵ m². For integration mode I, with increasing aperture area, the outlet temperature of the solar-heated working fluid increases. However, for integration modes II and III, the outlet temperature of the solar-heated working fluid increases first, then stays constant with aperture area. The aperture areas with changes in slope are 5.7×10⁵ and 3.6×10⁵ m² corresponding to integration modes II and III, which are caused by the upper temperature limit of Hitec molten salt.</p>
+    </div>
+    <div class="col-zh">
+      <p>图4展示了在不同集成方式下太阳能加热工质的出口温度随集热面积的变化。集热面积范围从3.0×10³到7.4×10⁵ m²。对于集成方式I，随着集热面积的增加，太阳能加热工质的出口温度增加。然而，对于集成方式II和III，随着集热面积的增加，太阳能加热工质的出口温度先增加，然后保持恒定。斜率变化的集热面积对应集成方式II和III分别为5.7×10⁵和3.6×10⁵ m²，这是由Hitec熔盐的温度上限引起的。</p>
+    </div>
+  </div>
+
+  <div style="display:flex; gap:20px; flex-wrap:wrap; justify-content:center;">
+    <div class="figure-container" style="flex:1; min-width:350px;">
+      <img src="images/page9_img1.jpeg" alt="Figure 4" style="max-width:100%;">
+      <div class="figure-caption">FIG. 4. Variation of outlet temperature with aperture area.</div>
+      <div class="figure-caption-zh">图4. 出口温度随集热面积的变化</div>
+    </div>
+    <div class="figure-container" style="flex:1; min-width:350px;">
+      <img src="images/page9_img2.jpeg" alt="Figure 5" style="max-width:100%;">
+      <div class="figure-caption">FIG. 5. Variation of SSHE with aperture area.</div>
+      <div class="figure-caption-zh">图5. SSHE随集热面积的变化</div>
+    </div>
+  </div>
+
+  <div class="bilingual">
+    <div class="col-en">
+      <p>Figure 5 shows the variation of SSHE with aperture area under various integration modes. For integration mode I, the SSHE is constant at 51.5%, which is independent of the aperture area. However, for integration modes II and III, with increasing aperture area, SSHEs are, respectively, constant at 45.9% and 44.4%, and then decrease.</p>
+      <p>Comparatively, the SSHE of integration mode I is the highest, because the temperature of the solar field is the lowest, leading to the least heat losses in piping and collectors. The SSHE of integration mode II is slightly higher than integration mode III due to its slightly lower inlet temperature of the solar-heated working fluid.</p>
+    </div>
+    <div class="col-zh">
+      <p>图5展示了在不同集成方式下SSHE随集热面积的变化。对于集成方式I，SSHE恒定在51.5%，与集热面积无关。然而，对于集成方式II和III，随着集热面积的增加，SSHE分别恒定在45.9%和44.4%，然后下降。</p>
+      <p>相比之下，集成方式I的SSHE最高，因为太阳能集热场的温度最低，导致管道和集热器中的热损失最小。集成方式II的SSHE略高于集成方式III，这是由于太阳能加热工质的进口温度略低。</p>
+    </div>
+  </div>
+
+  <div style="display:flex; gap:20px; flex-wrap:wrap; justify-content:center;">
+    <div class="figure-container" style="flex:1; min-width:350px;">
+      <img src="images/page9_img3.jpeg" alt="Figure 6" style="max-width:100%;">
+      <div class="figure-caption">FIG. 6. Variation of solar-generated electricity (energy evaluation) with aperture area.</div>
+      <div class="figure-caption-zh">图6. 能量评价的太阳能发电量随集热面积的变化</div>
+    </div>
+    <div class="figure-container" style="flex:1; min-width:350px;">
+      <img src="images/page10_img1.jpeg" alt="Figure 7" style="max-width:100%;">
+      <div class="figure-caption">FIG. 7. Variation of SEE (energy evaluation) with aperture area.</div>
+      <div class="figure-caption-zh">图7. 能量评价的SEE随集热面积的变化</div>
+    </div>
+  </div>
+
+  <div class="bilingual">
+    <div class="col-en">
+      <p>Figure 6 shows the variation of solar-generated electricity derived from energy evaluation with aperture area under various integration modes. As for integration mode I, the solar-generated electricity shows an upward trend with increasing aperture area. However, as for integration modes II and III, with increasing aperture area, the solar-generated electricity increases first and then stays constant. Comparatively, integration mode I produces more solar-generated electricity than the other two due to its highest SSHE.</p>
+      <p>Figure 7 shows the variation of SEE with aperture area and integration modes based on energy evaluation. With increasing aperture area, the SEE of integration mode I is constant at 27.1%. For integration mode II, the SEE is constant at 24.1% for an aperture area of less than 5.7×10⁵ m². If the aperture area is greater than 5.7×10⁵ m², the SEE decreases sharply. For integration mode III, the SEE stays constant at 23.4% for an aperture area of less than 3.6×10⁵ m². If the aperture area is greater than 3.6×10⁵ m², the SEE will decrease sharply as well. For integration modes II and III, the decrease in SEE is due to the decrease in SSHE caused by the dumped solar energy.</p>
+    </div>
+    <div class="col-zh">
+      <p>图6展示了在不同集成方式下基于能量评价的太阳能发电量随集热面积的变化。对于集成方式I，随着集热面积的增加，太阳能发电量呈上升趋势。然而，对于集成方式II和III，随着集热面积的增加，太阳能发电量先增加然后保持恒定。相比之下，集成方式I由于其最高的SSHE，产生的太阳能发电量多于其他两种方式。</p>
+      <p>图7展示了基于能量评价的不同集成方式下SEE随集热面积的变化。随着集热面积的增加，集成方式I的SEE恒定在27.1%。对于集成方式II，当集热面积小于5.7×10⁵ m²时，SEE恒定在24.1%。如果集热面积大于5.7×10⁵ m²，SEE急剧下降。对于集成方式III，当集热面积小于3.6×10⁵ m²时，SEE恒定在23.4%。如果集热面积大于3.6×10⁵ m²，SEE也会急剧下降。对于集成方式II和III，SEE的下降是由于弃置太阳能热量导致的SSHE下降。</p>
+    </div>
+  </div>
+</div>
+
+<div class="page">
+  <div style="font-size:13px; color:#666; margin-bottom:10px;">
+    Journal of Renewable and Sustainable Energy &nbsp;|&nbsp; ARTICLE &nbsp;|&nbsp; pubs.aip.org/aip/rse
+  </div>
+
+  <div class="section-title" style="font-size:14px;">B. Energy conversion based on exergy evaluation <span class="section-title-zh">— 基于㶲评价的能量转换</span></div>
+
+  <div class="bilingual">
+    <div class="col-en">
+      <p>Figure 8 shows the variation of SSHEE with aperture area under various integration modes. The SSHEE of integration mode I increases slightly with aperture area. The SSHEEs of integration modes II and III first increase slightly to 34.0% and 33.3%, respectively, then decrease sharply with aperture area. The increase in aperture area leads to more integrated solar heat and a temperature rise of solar-heated working fluid, thus the energy quality of the integrated solar heat rises first leading to increasing SSHEE. In addition, there exist integration limitations for integration modes II and III, because the inlet temperature of solar-heated working fluid is much higher and its mass flow is much lower, compared with integration mode I. The outlet temperature of solar-heated working fluid is closer to the upper temperature limit of Hitec molten salt.</p>
+      <p>Comparatively, if the aperture area is less than 5.7×10⁵ m², the SSHEE of integration mode II is higher than that of integration mode I. If the aperture area is less than 3.6×10⁵ m², the SSHEE of integration mode III is higher than that of integration mode I.</p>
+    </div>
+    <div class="col-zh">
+      <p>图8展示了在不同集成方式下SSHEE随集热面积的变化。集成方式I的SSHEE随集热面积略有增加。集成方式II和III的SSHEE先分别略微增加至34.0%和33.3%，然后随集热面积急剧下降。集热面积的增加导致集成太阳能热量增多和太阳能加热工质温度升高，因此集成太阳能热量的能量品质先提高导致SSHEE增加。此外，集成方式II和III存在集成限制，因为与集成方式I相比，太阳能加热工质的进口温度更高且质量流量更小。太阳能加热工质的出口温度更接近Hitec熔盐的温度上限。</p>
+      <p>相比之下，如果集热面积小于5.7×10⁵ m²，集成方式II的SSHEE高于集成方式I。如果集热面积小于3.6×10⁵ m²，集成方式III的SSHEE高于集成方式I。</p>
+    </div>
+  </div>
+
+  <div style="display:flex; gap:20px; flex-wrap:wrap; justify-content:center;">
+    <div class="figure-container" style="flex:1; min-width:350px;">
+      <img src="images/page10_img2.jpeg" alt="Figure 8" style="max-width:100%;">
+      <div class="figure-caption">FIG. 8. Variation of SSHEE with aperture area.</div>
+      <div class="figure-caption-zh">图8. SSHEE随集热面积的变化</div>
+    </div>
+    <div class="figure-container" style="flex:1; min-width:350px;">
+      <img src="images/page10_img3.jpeg" alt="Figure 9" style="max-width:100%;">
+      <div class="figure-caption">FIG. 9. Variation of solar-generated electricity (exergy evaluation) with aperture area.</div>
+      <div class="figure-caption-zh">图9. 㶲评价的太阳能发电量随集热面积的变化</div>
+    </div>
+  </div>
+
+  <div class="bilingual">
+    <div class="col-en">
+      <p>Figure 9 shows the variation of solar-generated electricity based on exergy evaluation with aperture area under various integration modes. As for integration mode I, with increasing aperture area, the solar-generated electricity shows an upward trend. For integration modes II and III, with increasing aperture area, the solar-generated electricity increases and then stays constant. By comparison, the results are different from those obtained through the energy evaluation.</p>
+      <p>If the aperture area increases to 3.6×10⁵ m², integration mode II ranks first in terms of solar-generated electricity with integration mode III ranking second. If the aperture area increases from 3.6×10⁵ to 5.7×10⁵ m², integration mode II still ranks first in terms of solar-generated electricity with integration mode I ranking second. If the aperture area increases from 5.7×10⁵ m², integration mode I ranks first in terms of solar-generated electricity with integration modes II and III, respectively, ranking second and third. The maximum solar-generated electricity are 178.7, 136.1, and 85.6 MW corresponding to integration modes I, II, and III.</p>
+    </div>
+    <div class="col-zh">
+      <p>图9展示了在不同集成方式下基于㶲评价的太阳能发电量随集热面积的变化。对于集成方式I，随着集热面积的增加，太阳能发电量呈上升趋势。对于集成方式II和III，随着集热面积的增加，太阳能发电量先增加然后保持恒定。通过比较，这些结果与通过能量评价获得的结果不同。</p>
+      <p>如果集热面积增加到3.6×10⁵ m²，集成方式II在太阳能发电量方面排名第一，集成方式III排名第二。如果集热面积从3.6×10⁵增加到5.7×10⁵ m²，集成方式II在太阳能发电量方面仍然排名第一，集成方式I排名第二。如果集热面积从5.7×10⁵ m²增加，集成方式I在太阳能发电量方面排名第一，集成方式II和III分别排名第二和第三。对应集成方式I、II和III的最大太阳能发电量分别为178.7、136.1和85.6 MW。</p>
+    </div>
+  </div>
+
+  <div style="display:flex; gap:20px; flex-wrap:wrap; justify-content:center;">
+    <div class="figure-container" style="flex:1; min-width:350px;">
+      <img src="images/page11_img1.jpeg" alt="Figure 10" style="max-width:100%;">
+      <div class="figure-caption">FIG. 10. Variation of SEE (exergy evaluation) with aperture area.</div>
+      <div class="figure-caption-zh">图10. 㶲评价的SEE随集热面积的变化</div>
+    </div>
+  </div>
+
+  <div class="bilingual">
+    <div class="col-en">
+      <p>Based on exergy evaluation, Fig. 10 shows the variation of SEE with aperture area under various integration modes. For integration mode I, SEE increases with increasing aperture area. For integration modes II and III, with increasing aperture area, SEEs increase slightly first to 24.7% and 24.1%, respectively, and then decrease.</p>
+      <p>Comparatively, integration mode II is superior to the other two in terms of SEE, if the aperture area is less than 5.7×10⁵ m². Because in this range, its SSHEE remains the highest. However, if the aperture area is greater than 5.7×10⁵ m², SEE of integration mode III is higher than the other two. That is because there exists dumped solar exergy for integration modes I and II, which cannot be further transferred to working fluid caused by the upper temperature limit of the Hitec molten salt.</p>
+    </div>
+    <div class="col-zh">
+      <p>基于㶲评价，图10展示了在不同集成方式下SEE随集热面积的变化。对于集成方式I，SEE随集热面积增加而增加。对于集成方式II和III，随着集热面积的增加，SEE先分别略微增加至24.7%和24.1%，然后下降。</p>
+      <p>相比之下，如果集热面积小于5.7×10⁵ m²，集成方式II在SEE方面优于其他两种方式。因为在此范围内，其SSHEE保持最高。然而，如果集热面积大于5.7×10⁵ m²，集成方式III的SEE高于其他两种方式。这是因为集成方式I和II存在弃置太阳能㶲，受Hitec熔盐温度上限的限制无法进一步传递给工质。</p>
+    </div>
+  </div>
+</div>
+
+<div class="page">
+  <div style="font-size:13px; color:#666; margin-bottom:10px;">
+    Journal of Renewable and Sustainable Energy &nbsp;|&nbsp; ARTICLE &nbsp;|&nbsp; pubs.aip.org/aip/rse
+  </div>
+
+  <div class="section-title" style="font-size:14px;">C. Comparison and discussion between energy evaluation and exergy evaluation <span class="section-title-zh">— 能量评价与㶲评价的比较与讨论</span></div>
+
+  <div class="bilingual">
+    <div class="col-en">
+      <p>Table IV compares the conversion performance of solar energy among various integration modes based on energy and exergy evaluation methods. According to the results from the energy evaluation, it can be concluded that integration mode I is superior to the other two in terms of the most solar-generated electricity, the highest SSHE and the highest SEE. However, according to the exergy evaluation, integration mode II is superior to the other two in terms of the highest SSHEE and the highest SEE. The maximum solar-generated electricity of integration mode II is 136.1 MW with the corresponding aperture area being 5.7×10⁵ m², which is affected by the upper temperature limit of Hitec molten salt.</p>
+    </div>
+    <div class="col-zh">
+      <p>表IV基于能量评价和㶲评价方法比较了不同集成方式间的太阳能转换性能。根据能量评价的结果，可以得出结论：集成方式I在最多的太阳能发电量、最高的SSHE和最高的SEE方面优于其他两种方式。然而，根据㶲评价，集成方式II在最高的SSHEE和最高的SEE方面优于其他两种方式。集成方式II的最大太阳能发电量为136.1 MW，相应的集热面积为5.7×10⁵ m²，这受到Hitec熔盐温度上限的影响。</p>
+    </div>
+  </div>
+
+  <div class="bilingual">
+    <div class="col-en">
+      <p>It can be seen that different evaluation methods may result in inconsistent results for the same evaluation criteria. Energy evaluation considers the energy quantity and ignores the energy quality; therefore, the contribution of the total electricity could only be calculated by the quantity of solar-heated and coal-heated working fluids. The conversion from solar heat energy to solar-generated electricity is considered as constant, equaling to the cycle efficiency. However, the above-mentioned conclusion derived from energy evaluation is obviously unreasonable since the energy quality of solar energy is ignored.</p>
+    </div>
+    <div class="col-zh">
+      <p>可以看出，不同的评价方法可能导致相同评价准则下的结果不一致。能量评价仅考虑能量数量而忽略能量品质；因此，总电量的贡献只能通过太阳能加热和煤加热工质的数量来计算。太阳能热量到太阳能发电量的转换被视为常数，等于循环效率。然而，上述从能量评价得出的结论显然不合理，因为它忽略了太阳能的能量品质。</p>
+    </div>
+  </div>
+
+  <div class="bilingual">
+    <div class="col-en">
+      <p>To simultaneously take both energy quantity and energy quality into consideration, an exergy evaluation is conducted for comparison. In this method, the conversion efficiency from solar heat exergy to solar-generated electricity is considered as constant, equaling to the cycle exergy efficiency. The contribution to the total electricity is allocated by the exergy quantity of solar-heated and coal-heated working fluids. Based on exergy evaluation, the SSHEE and SEE of integration mode I with the lowest temperature of solar field are lower than those of integration modes II and III. Comparatively, the solar-generated electricity and SEE of integration mode I under the aperture area being 7.4×10⁵ m² was, respectively, 23.0 MW and 3.1% lower than those calculated through energy evaluation. Therefore, it is more reasonable to utilize exergy method to evaluate the conversion of solar energy.</p>
+    </div>
+    <div class="col-zh">
+      <p>为同时考虑能量数量和能量品质，采用㶲评价进行比较。在该方法中，从太阳能热㶲到太阳能发电量的转换效率被视为常数，等于循环㶲效率。总电量的贡献按太阳能加热和煤加热工质的㶲数量分配。基于㶲评价，太阳能集热场温度最低的集成方式I的SSHEE和SEE低于集成方式II和III。相比之下，在集热面积为7.4×10⁵ m²时，集成方式I的太阳能发电量和SEE分别比通过能量评价计算的结果低23.0 MW和3.1%。因此，利用㶲方法评价太阳能转换更为合理。</p>
+    </div>
+  </div>
+</div>
+
+<!-- ====== PAGES 11-12: CONCLUSION + ACKNOWLEDGMENTS + REFERENCES ====== -->
+<div class="page">
+  <div style="font-size:13px; color:#666; margin-bottom:10px;">
+    Journal of Renewable and Sustainable Energy &nbsp;|&nbsp; ARTICLE &nbsp;|&nbsp; pubs.aip.org/aip/rse
+  </div>
+
+  <div class="section-title">V. CONCLUSION <span class="section-title-zh">— 结论</span></div>
+
+  <div class="bilingual">
+    <div class="col-en">
+      <p>To fill the research gap about integrating solar heat with mid- and high-temperature collected by parabolic trough technology, this paper proposed a solar-aided double reheat coal-fired power generation system using molten salt as the heat transfer fluid. Three typical integration modes were designed and compared, in which inlet superheated steam, inlet reheated steam and inlet double reheated steam was, respectively, preheated by solar heat. These three integration modes were compared based on energy evaluation and exergy evaluation, respectively. The major conclusions are:</p>
+    </div>
+    <div class="col-zh">
+      <p>为填补利用抛物槽式技术收集的中高温太阳能热量集成的研究空白，本文提出了一种使用熔盐作为传热流体的太阳能辅助二次再热燃煤发电系统。设计并比较了三种典型集成方式，分别利用太阳能热量预热进口过热蒸汽、进口再热蒸汽和进口二次再热蒸汽。分别基于能量评价和㶲评价对这三种集成方式进行了比较。主要结论如下：</p>
+    </div>
+  </div>
+
+  <div class="bilingual">
+    <div class="col-en">
+      <p>(1) As for integration modes II and III, there exists an integration limitation of solar energy due to the upper temperature limit of molten salt. If the aperture area is greater than 3.6×10⁵ m² (for integration mode II) or 5.7×10⁵ m² (for integration mode III), there will be dumped solar heat leading to decreased conversion performance of solar energy.</p>
+      <p>(2) It is not applicable to utilize energy evaluation method to calculate solar-generated electricity and SEE, which ignores the energy quality of solar energy. The major shortcoming is that the cycle efficiency is mistaken as the conversion efficiency from solar heat to solar-generated electricity.</p>
+      <p>(3) Exergy evaluation is more appropriate through case study. In this method, the conversion efficiency from solar heat exergy to solar-generated electricity is considered as constant, equaling to the cycle exergy efficiency. Through case study, integration mode II was superior to the other two in terms of the highest SSHEE (i.e., 34.0%) and SEE (i.e., 24.7%). The corresponding solar-generated electricity and aperture area were 136.1 MW and 5.7×10⁵ m², respectively.</p>
+    </div>
+    <div class="col-zh">
+      <p>(1) 对于集成方式II和III，由于熔盐的温度上限，存在太阳能的集成限制。如果集热面积大于3.6×10⁵ m²（对于集成方式II）或5.7×10⁵ m²（对于集成方式III），将出现弃置太阳能热量，导致太阳能转换性能下降。</p>
+      <p>(2) 利用能量评价方法计算太阳能发电量和SEE不适用，因为它忽略了太阳能的能量品质。其主要缺点是将循环效率错误地视为从太阳能热量到太阳能发电量的转换效率。</p>
+      <p>(3) 通过案例研究，㶲评价更为合适。在该方法中，从太阳能热㶲到太阳能发电量的转换效率被视为常数，等于循环㶲效率。通过案例研究，集成方式II在最高的SSHEE（即34.0%）和SEE（即24.7%）方面优于其他两种方式。相应的太阳能发电量和集热面积分别为136.1 MW和5.7×10⁵ m²。</p>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <div class="section-title">ACKNOWLEDGMENTS <span class="section-title-zh">— 致谢</span></div>
+
+  <div class="bilingual">
+    <div class="col-en">
+      <p>This work was supported by National Natural Science Foundation of China (No. 52106012), the Natural Science Foundation of the Jiangsu Higher Education Institutions of China (No. 21KJB470032), and the Qinglan Project of Jiangsu Province of China.</p>
+    </div>
+    <div class="col-zh">
+      <p>本研究得到国家自然科学基金（No. 52106012）、江苏省高等学校自然科学研究面上项目（No. 21KJB470032）和江苏省"青蓝工程"的资助。</p>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <div class="section-title">AUTHOR DECLARATIONS <span class="section-title-zh">— 作者声明</span></div>
+
+  <div class="bilingual">
+    <div class="col-en">
+      <p><b>Conflict of Interest:</b> The authors have no conflicts to disclose.</p>
+      <p><b>Author Contributions:</b> Junjie Wu: Conceptualization (lead); Formal analysis (lead); Funding acquisition (lead); Methodology (lead); Software (equal); Supervision (lead); Validation (equal); Writing – original draft (lead); Writing – review & editing (equal). Jiaming Wu: Software (equal); Validation (equal); Writing – original draft (supporting); Writing – review & editing (equal). Yu Han: Writing – original draft (supporting); Writing – review & editing (supporting).</p>
+    </div>
+    <div class="col-zh">
+      <p><b>利益冲突：</b>作者无利益冲突需要披露。</p>
+      <p><b>作者贡献：</b>Junjie Wu: 概念化（主导）；形式分析（主导）；经费获取（主导）；方法论（主导）；软件（等同）；指导（主导）；验证（等同）；写作–原稿（主导）；写作–评审与编辑（等同）。Jiaming Wu: 软件（等同）；验证（等同）；写作–原稿（支持）；写作–评审与编辑（等同）。Yu Han: 写作–原稿（支持）；写作–评审与编辑（支持）。</p>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <div class="section-title">REFERENCES <span class="section-title-zh">— 参考文献</span></div>
+
+  <div class="bilingual">
+    <div class="col-en">
+      <ol style="font-size:11px; padding-left:20px;">
+        <li>E. Hu, Y. Yang, A. Nishimura, F. Yilmaz, and A. Kouzani, "Solar thermal aided power generation," Appl. Energy 87(9), 2881–2885 (2010).</li>
+        <li>J. Qin, Q. Zhang, Z. Liu, E. Hu, and H. Zhang, "A strategy to flexibly operate a solar aided power generation plant for wide irradiation conditions," Appl. Therm. Eng. 213, 118659 (2022).</li>
+        <li>Y. Zhao, H. Hong, and H. Jin, "Mid and low-temperature solar–coal hybridization mechanism and validation," Energy 74, 78–87 (2014).</li>
+        <li>W. Pierce, P. Gauché, T. von Backström, A. C. Brent, and A. Tadros, "A comparison of solar aided power generation (SAPG) and stand-alone concentrating solar power (CSP): A South African case study," Appl. Therm. Eng. 61(2), 657–662 (2013).</li>
+        <li>C. Li, R. Zhai, and Y. Sun, "Thermal and economic performances comparison of different pulverized coal power systems augmented by solar trough or tower technologies," Case Stud. Therm. Eng. 34, 102009 (2022).</li>
+        <li>J. Li, Y. Xin, B. Hu, K. Zeng, Z. Wu, S. Fan et al., "Safety and thermal efficiency performance assessment of solar aided coal-fired power plant based on turbine steam double reheat," Energy 226, 120277 (2021).</li>
+        <li>J. Wu and Y. Han, "Integration strategy optimization of solar-aided combined heat and power (CHP) system," Energy 263, 125875 (2023).</li>
+        <li>J. Wu, H. Hou, and Y. Yang, "Annual economic performance of a solar-aided 600 MW coal-fired power generation system under different tracking modes, aperture areas, and storage capacities," Appl. Therm. Eng. 104, 319–332 (2016).</li>
+        <li>H. Hou, J. Wu, Y. Yang, E. Hu, and S. Chen, "Performance of a solar aided power plant in fuel saving mode," Appl. Energy 160, 873–881 (2015).</li>
+        <li>J. Qin, Q. Zhang, E. Hu, J. Duan, Y. Zhou, and H. Zhang, "Optimisation of solar aided power generation plant with storage system adopting two non-displaced extraction steam operation strategies," Energy 239, 121937 (2022).</li>
+        <li>Y. Jiang, L. Duan, L. Pang, and J. Song, "Thermal performance study of tower solar aided double reheat coal-fired power generation system," Energy 230, 120857 (2021).</li>
+        <li>J. Fredriksson, M. Eickhoff, L. Giese, and M. Herzog, "A comparison and evaluation of innovative parabolic trough collector concepts for large-scale application," Energy Convers. Manage. 277, 116621 (2023).</li>
+      </ol>
+    </div>
+    <div class="col-zh">
+      <div class="col-label">中文翻译（参考文献标题）</div>
+      <ol style="font-size:11px; padding-left:20px;">
+        <li>胡 E. 等, "太阳能热辅助发电," 应用能源 87(9), 2881–2885 (2010).</li>
+        <li>秦 J. 等, "宽辐照条件下灵活运行太阳能辅助发电厂的策略," 应用热工程 213, 118659 (2022).</li>
+        <li>赵 Y. 等, "中低温太阳能-煤混合机理与验证," 能源 74, 78–87 (2014).</li>
+        <li>Pierce W. 等, "太阳能辅助发电(SAPG)与独立聚光太阳能发电(CSP)的比较：南非案例研究," 应用热工程 61(2), 657–662 (2013).</li>
+        <li>李 C. 等, "太阳能槽式或塔式技术增强的不同煤粉发电系统的热性能和经济性能比较," 案例研究热工程 34, 102009 (2022).</li>
+        <li>李 J. 等, "基于汽轮机蒸汽二次再热的太阳能辅助燃煤电厂安全性和热效率性能评估," 能源 226, 120277 (2021).</li>
+        <li>吴 J., 韩 Y., "太阳能辅助热电联产(CHP)系统集成策略优化," 能源 263, 125875 (2023).</li>
+        <li>吴 J. 等, "不同跟踪方式、集热面积和储热容量下太阳能辅助600 MW燃煤发电系统的年度经济性能," 应用热工程 104, 319–332 (2016).</li>
+        <li>侯 H. 等, "节煤模式下太阳能辅助电厂性能," 应用能源 160, 873–881 (2015).</li>
+        <li>秦 J. 等, "采用两种非置换抽汽运行策略的带储热系统太阳能辅助发电厂优化," 能源 239, 121937 (2022).</li>
+        <li>蒋 Y. 等, "塔式太阳能辅助二次再热燃煤发电系统热性能研究," 能源 230, 120857 (2021).</li>
+        <li>Fredriksson J. 等, "大规模应用中创新抛物槽式集热器概念的比较与评价," 能源转换与管理 277, 116621 (2023).</li>
+      </ol>
+    </div>
+  </div>
+
+  <div style="text-align:center; margin-top:20px; font-size:11px; color:#999;">
+    Published under an exclusive license by AIP Publishing &nbsp;|&nbsp; https://doi.org/10.1063/5.0160837
+  </div>
+</div>
+
+</div>
+</body>
+</html>
